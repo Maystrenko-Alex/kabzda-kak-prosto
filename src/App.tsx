@@ -5,11 +5,15 @@ const App = () => {
   debugger
   return (
     <div>
-      This is App component
+      <AppTitle />
       <Rating />
       <Accordion />
     </div>
   );
+}
+
+function AppTitle() {
+  return <>This is App component</>
 }
 
 function Rating() {
@@ -37,13 +41,23 @@ function Accordion () {
   debugger
   return (
     <div>
-      <h3>Menu</h3>
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>        
-      </ul>
+      <AccordionTitle />
+      <AccordionBody />
     </div>
   );
 }
 export default App;
+
+function AccordionTitle() {
+  return <h3>Menu</h3>
+}
+
+function AccordionBody() {
+  return (
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>        
+      </ul>
+  );
+}

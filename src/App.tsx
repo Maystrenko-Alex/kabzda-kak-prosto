@@ -9,15 +9,19 @@ const App = () => {
       <input />
       <PageTitle title={"This is App component"} />
       <Rating value={3} />
-      <Accordion title={"Title_1"}/>
-      <Accordion title={"Title_2"}/>
+      <Accordion title={"Title_1"} collapsed={false} />
+      <Accordion title={"Title_2"} collapsed={true} />
       <PageTitle title={"My frends"} />
       <Rating value={4} />
     </div>
   );
 }
 
-function PageTitle(props: any) {
+type PageTitlePropsType = {
+  title: string
+}
+
+function PageTitle(props: PageTitlePropsType) {
   return <div>{props.title}</div>
 }
 

@@ -15,12 +15,12 @@ export function Accordion(props: AccordionPropsType) {
   );
 }
 
-function AccordionTitle(props: AccordionTitlePropsType) {
+export function AccordionTitle(props: AccordionTitlePropsType) {
   debugger
   return <h3>{props.titleValue}</h3>
 }
 
-function AccordionBody() {
+export function AccordionBody() {
   return (
     <ul>
       <li>1</li>

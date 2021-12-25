@@ -6,8 +6,9 @@ type PropsType = {
 
 export const OnOff = (props: PropsType) => {
 
-const [on, setOn] = useState<true | false>(true)
-console.log("on:", on)
+  const [on, setOn] = useState<true | false>(true);
+  console.log("on:", on);
+ 
   const onStyle = {
     width: "25px",
     height: "25px",
@@ -20,9 +21,9 @@ console.log("on:", on)
     width: "25px",
     height: "25px",
     border: "1px solid black",
-    backgroundColor: on ? "white" : "red",
+    display: "inline-block",
     marginLeft: "10px",
-    display: "inline-block"
+    backgroundColor: on ? "white" : "red"
   };
   const indicatorStyle = {
     width: "15px",

@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Accordion } from './components/Accordion/Accordion';
+import { UncontrolledAccrodion } from './components/Accordion/UncontrolledAccordion';
 import { OnOff } from './components/OnOff/OnOff';
 
 import { Rating } from './components/Rating/Rating';
@@ -11,7 +12,8 @@ const App = () => {
       <OnOff />
       <OnOff />
       <OnOff />
-      
+      <UncontrolledAccrodion title={'Title_1'} />
+      <UncontrolledAccrodion title={'Title_2'} />
 
       <PageTitle title={"This is App component"} />
       <Rating value={3} />

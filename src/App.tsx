@@ -5,22 +5,17 @@ import { UncontrolledAccrodion } from './components/Accordion/UncontrolledAccord
 import { OnOff } from './components/OnOff/OnOff';
 
 import { Rating } from './components/Rating/Rating';
+import { UncontrolledRating } from './components/UncontrolledRating/UncontrolledRating';
 
 const App = () => {
   return (
-    <div>
+    <div className='App'>
       <OnOff />
-      <OnOff />
-      <OnOff />
+      
       <UncontrolledAccrodion title={'Title_1'} />
-      <UncontrolledAccrodion title={'Title_2'} />
-
-      <PageTitle title={"This is App component"} />
-      <Rating value={3} />
-      <Accordion title={"Title_1"} collapsed={false} />
-      <Accordion title={"Title_2"} collapsed={true} />
-      <PageTitle title={"My frends"} />
-      <Rating value={4} />
+      <Accordion title={'Menu'} collapsed={false} />
+      <UncontrolledRating />
+      <Rating value={0} />
     </div>
   );
 }

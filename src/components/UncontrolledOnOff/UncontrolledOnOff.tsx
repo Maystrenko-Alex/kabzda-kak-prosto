@@ -1,21 +1,20 @@
 import { useState } from "react";
 
 type UncontrolledOnOffPropsType = {
-  callBack: (uncOn: boolean) => void
+  callBack: (on: boolean) => void
 }
 
 export const UncontrolledOnOff = (props: UncontrolledOnOffPropsType) => {
 
-  const [on, setOn] = useState<true | false>(true);
-  const setOnClick = () => {
-    setOn(true);
-    props.callBack(true);
+  const [on, setOn] = useState<boolean>(false);
+  const switchOn = () => {
+    setOn(true)
+    props.callBack(true)
   }
-  const setOffClick = () => {
-    setOn(false);
-    props.callBack(false);
+  const switchOff = () => {
+    setOn(false)
+    props.callBack(false)
   }
-
 
   const onStyle = {
     width: "25px",
@@ -44,8 +43,8 @@ export const UncontrolledOnOff = (props: UncontrolledOnOffPropsType) => {
   };
   return (
     <div>
-      <div onClick={setOnClick} style={onStyle}>On</div>
-      <div onClick={setOffClick} style={offStyle}>Off</div>
+      <div onClick={switchOn} style={onStyle}>On</div>
+      <div onClick={switchOff} style={offStyle}>Off</div>
       <div onClick={() => alert("push on Button")} style={indicatorStyle}></div>
     </div>
   );

@@ -1,26 +1,29 @@
-export type AccordionPropsType = {
+type AccordionPropsType = {
   title: string
-  collapsed: true | false
+  collapsed: boolean
+  callBack: (collapsed: boolean) => void
 }
 
-type AccordionTitlePropsType = {
-  titleValue: string
-}
-export function Accordion(props: AccordionPropsType) {
+export const Accordion = (props: AccordionPropsType) => {
+  const switchCollapsed = () => props.callBack(!props.collapsed)
   return (
     <div>
-      <AccordionTitle titleValue={props.title} />
-      { !props.collapsed && <AccordionBody />}
+      <AccordionTitle title={props.title} callBack={switchCollapsed} />
+      {!props.collapsed && <AccordionBody />}
     </div>
   );
 }
 
-export function AccordionTitle(props: AccordionTitlePropsType) {
-  debugger
-  return <h3>{props.titleValue}</h3>
+type AccordionTitlePropsType = {
+  title: string
+  callBack: () => void
 }
 
-export function AccordionBody() {
+const AccordionTitle = (props: AccordionTitlePropsType) => {
+  return <h3 onClick={props.callBack}>--{props.title}--</h3>
+}
+
+const AccordionBody = () => {
   return (
     <ul>
       <li>1</li>

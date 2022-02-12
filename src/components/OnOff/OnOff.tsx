@@ -1,11 +1,11 @@
 import s from './OnOff.module.css';
 
-type PropsType = {
+export type OnOffPropsType = {
   on: boolean
   callBack: (on: boolean) => void
 }
 
-export const OnOff = (props: PropsType) => {
+export const OnOff = (props: OnOffPropsType) => {
 
   const switchOn = ()=>props.callBack(true);
   const switchOff = ()=>props.callBack(false);

@@ -1,8 +1,8 @@
 export type RatingType = 0 | 1 | 2 | 3 | 4 | 5;
 
-type RatingPropsType = {
+export type RatingPropsType = {
   value: RatingType
-  callBack: (value: 0 | 1 | 2 | 3 | 4 | 5) => void
+  callBack: (value: RatingType) => void
 }
 
 export const Rating = (props: RatingPropsType) => {

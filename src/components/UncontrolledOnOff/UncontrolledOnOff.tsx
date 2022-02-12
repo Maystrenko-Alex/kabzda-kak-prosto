@@ -1,19 +1,20 @@
 import { useState } from "react";
 
-type UncontrolledOnOffPropsType = {
-  callBack: (on: boolean) => void
+export type UncontrolledOnOffPropsType = {
+  onChange: (on: boolean) => void
+  defaultOn?: boolean
 }
 
 export const UncontrolledOnOff = (props: UncontrolledOnOffPropsType) => {
 
-  const [on, setOn] = useState<boolean>(false);
+  const [on, setOn] = useState<boolean>(props.defaultOn || false);
   const switchOn = () => {
     setOn(true)
-    props.callBack(true)
+    props.onChange(true)
   }
   const switchOff = () => {
     setOn(false)
-    props.callBack(false)
+    props.onChange(false)
   }
 
   const onStyle = {

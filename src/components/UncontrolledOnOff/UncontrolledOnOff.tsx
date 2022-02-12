@@ -6,8 +6,8 @@ export type UncontrolledOnOffPropsType = {
 }
 
 export const UncontrolledOnOff = (props: UncontrolledOnOffPropsType) => {
-
-  const [on, setOn] = useState<boolean>(props.defaultOn || false);
+  const [on, setOn] = useState<boolean>(props.defaultOn ? true : false);
+  
   const switchOn = () => {
     setOn(true)
     props.onChange(true)

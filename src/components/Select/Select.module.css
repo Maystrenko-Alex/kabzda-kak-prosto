@@ -1,0 +1,21 @@
+.wrapper {
+  padding: 15px;
+  /* position: relative; */
+  height: 120px;
+}
+.default {
+  border: 1px solid black;
+  min-width: 75px;
+  text-align: center;
+  
+}
+.selectItems {
+  border: 1px solid black;
+  text-align: center;
+  position: absolute;
+  min-width: 75px;
+  text-align: center;
+}
+.unvisible {
+  display: none;
+}

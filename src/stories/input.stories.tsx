@@ -3,7 +3,7 @@ import { Story } from "@storybook/react";
 import React, { ChangeEvent } from "react";
 
 export default {
-  title: 'input',
+  title: 'MyComponents/input',
   argTypes: {
     onChange: { action: "want to change" }
   }

@@ -17,10 +17,10 @@ export default {
   }
 }
 const items: ItemsType = [
-  {title: 'Dimich', value: 1},
-  {title: 'Valera', value: 2},
-  {title: 'Artem', value: 3},
-  {title: 'Viktor', value: 4}
+  {title: 'Dimich', value: '1'},
+  {title: 'Valera', value: '2'},
+  {title: 'Artem', value: '3'},
+  {title: 'Viktor', value: '4'}
 ]
 const Template: Story<AccordionPropsType> = (args) => <Accordion {...args} />;
 
@@ -42,10 +42,11 @@ UnCollapsedMenu.args = {
 
 export const ModeChanged: Story<AccordionPropsType> = (args) => {
   const [value, setValue] = useState<boolean>(true)
-  return <Accordion {...args} collapsed={value} />;
+  return <Accordion {...args} collapsed={value} onClick={setValue}/>;
 }
 ModeChanged.args = {
   title:"Menu",
   items: items,
-  // onClick: (value) => alert('user with ID ${items.value} should be happy')
+  // onChange: ()=>('action'),
+  // onClick: () => ('user  should be happy')
 }

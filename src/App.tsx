@@ -37,7 +37,7 @@ const App = () => {
         onChange={()=>alert('click item')}
         items={items} 
         color={'red'}/>
-      <UncontrolledAccrodion title={'UNMenu'} />
+      <UncontrolledAccrodion title={'UNMenu!'} />
       <Rating value={value} callBack={setValue}/>
       <UncontrolledRating />
       {/* <MyButton title={'button'} color={'green'} onClick={()=>alert('clickfalse')}/> */}
